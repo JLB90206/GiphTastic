@@ -39,7 +39,7 @@ $(document).ready(function () {
     // Function that displays all of the gifs
     function displayGifs() {
         var disGifz = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + disGifz + "&api_key=5klygNU7fJFxVAFL59rYwGP9RYZGPfYb&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + disGifz + "&api_key=5klygNU7fJFxVAFL59rYwGP9RYZGPfYb&limit=10";
         console.log(queryURL); // displays the constructed url
         $.ajax({
             url: queryURL,
@@ -77,7 +77,7 @@ $(document).ready(function () {
     displayGifButtons(); // displays list of actions already created
     addNewButton();
     removeLastButton();
-    // Document Event Listeners
+    // Document On Click Events
     $(document).on("click", ".action", displayGifs);
     $(document).on("click", ".image", function () {
         var state = $(this).attr('data-state');
