@@ -61,12 +61,15 @@ $(document).ready(function () {
                     gifDiv.append(gifRating);
                     // pulling gif
                     var gifImage = $("<img>");
-                    gifImage.attr("src", results[i].images.fixed_height_small_still.url); // still image stored into src of image
-                    gifImage.attr("data-still", results[i].images.fixed_height_small_still.url); // still image
+                    gifImage.attr("src", results[i].images.fixed_height_small.url); // still image stored into src of image
+                  
                     gifImage.attr("data-animate", results[i].images.fixed_height_small.url); // animated image
-                    gifImage.attr("data-state", "still"); // set the image state
+                    gifImage.attr("data-state", "animate"); // set the image state
                     gifImage.addClass("image");
                     gifDiv.append(gifImage);
+                    // var downloadButton = $(`<a href="${results[i].images.downsized.url}" download="${results[i].id}">`)
+                    // downloadButton.text("DOWNLOAD");
+                    // gifDiv.append(downloadButton);
                     // pulling still image of gif
                     // adding div of gifs to gifsView div
                     $("#gifsView").prepend(gifDiv);
